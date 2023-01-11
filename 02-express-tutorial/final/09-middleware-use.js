@@ -5,7 +5,8 @@ const logger = require("./logger"); // import middleware modules intp project
 const authorize = require("./authorize"); // import middleware modules intp project
 
 //  req => middleware => res
-app.use([logger, authorize]);
+
+app.use([logger, authorize]); // the order of the middleware influences what will be run first
 
 // api/home/about/products
 app.get("/", (req, res) => {
