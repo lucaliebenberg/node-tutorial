@@ -1,5 +1,6 @@
 const Task = require("../models/Task");
-import asyncWrapper from "../middleware/async";
+// import { asyncWrapper } from "../middleware/async";
+const asyncWrapper = require("../middleware/async");
 
 const getAllTasks = asyncWrapper(async (req, res) => {
   const tasks = await Task.find({});
